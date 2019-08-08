@@ -1,0 +1,1135 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>基类模板抽取 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="yong-hu-mo-ban-chou-qu.html" />
+    
+    
+    <link rel="prev" href="yong-hu-zhong-xin.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../xiang-mu-chu-shi-hua/xiang-mu-chu-shi-hua.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/xiang-mu-chu-shi-hua.html">
+            
+                    
+                    项目开发准备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../xiang-mu-chu-shi-hua/xiang-mu-fen-xi.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/xiang-mu-fen-xi.html">
+            
+                    
+                    项目分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../xiang-mu-chu-shi-hua/xiang-mu-kuang-jia-da-jian.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/xiang-mu-kuang-jia-da-jian.html">
+            
+                    
+                    项目框架搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../xiang-mu-chu-shi-hua/xiang-mu-pei-zhi.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/xiang-mu-pei-zhi.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../xiang-mu-chu-shi-hua/dai-ma-chou-qu.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/dai-ma-chou-qu.html">
+            
+                    
+                    创建app对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../xiang-mu-chu-shi-hua/ri-zhi-de-shi-yong.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/ri-zhi-de-shi-yong.html">
+            
+                    
+                    日志的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../xiang-mu-chu-shi-hua/chuang-jian-lan-tu-mu-lu.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/chuang-jian-lan-tu-mu-lu.html">
+            
+                    
+                    创建蓝图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../xiang-mu-chu-shi-hua/shu-ju-ku-biao-fen-xi.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/shu-ju-ku-biao-fen-xi.html">
+            
+                    
+                    定义模型类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../xiang-mu-chu-shi-hua/jing-tai-ji-mo-ban-wen-jian-dao-ru.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/jing-tai-ji-mo-ban-wen-jian-dao-ru.html">
+            
+                    
+                    资源文件导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../xiang-mu-chu-shi-hua/zhu-ce-gen-lu-you.html">
+            
+                <a href="../xiang-mu-chu-shi-hua/zhu-ce-gen-lu-you.html">
+            
+                    
+                    启动项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ge-ren-zhu-ye.html">
+            
+                <a href="ge-ren-zhu-ye.html">
+            
+                    
+                    用户模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="zhu-ce/zhu-ce.html">
+            
+                <a href="zhu-ce/zhu-ce.html">
+            
+                    
+                    注册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="zhu-ce/tu-pian-yzm.html">
+            
+                <a href="zhu-ce/tu-pian-yzm.html">
+            
+                    
+                    图片验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="zhu-ce/duan-xin-yzm.html">
+            
+                <a href="zhu-ce/duan-xin-yzm.html">
+            
+                    
+                    短信验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="zhu-ce/zhu-ce-chu-li.html">
+            
+                <a href="zhu-ce/zhu-ce-chu-li.html">
+            
+                    
+                    注册处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="deng-lu.html">
+            
+                <a href="deng-lu.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="tui-chu.html">
+            
+                <a href="tui-chu.html">
+            
+                    
+                    退出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="yong-hu-zhong-xin.html">
+            
+                <a href="yong-hu-zhong-xin.html">
+            
+                    
+                    用户中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="ji-lei-mo-ban-chou-qu.html">
+            
+                <a href="ji-lei-mo-ban-chou-qu.html">
+            
+                    
+                    基类模板抽取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="yong-hu-mo-ban-chou-qu.html">
+            
+                <a href="yong-hu-mo-ban-chou-qu.html">
+            
+                    
+                    用户模板代码抽取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="ji-ben-zi-liao-she-zhi.html">
+            
+                <a href="ji-ben-zi-liao-she-zhi.html">
+            
+                    
+                    基本资料设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="yong-hu-tou-xiang-shang-chuan.html">
+            
+                <a href="yong-hu-tou-xiang-shang-chuan.html">
+            
+                    
+                    用户头像上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="yong-hu-mi-ma-xiu-gai.html">
+            
+                <a href="yong-hu-mi-ma-xiu-gai.html">
+            
+                    
+                    用户密码修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="yong-hu-xin-wen-shou-cang.html">
+            
+                <a href="yong-hu-xin-wen-shou-cang.html">
+            
+                    
+                    用户新闻收藏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="yong-hu-xin-wen-fa-bu.html">
+            
+                <a href="yong-hu-xin-wen-fa-bu.html">
+            
+                    
+                    用户发布新闻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="yong-hu-xin-wen-lie-biao.html">
+            
+                <a href="yong-hu-xin-wen-lie-biao.html">
+            
+                    
+                    用户新闻列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="yong-hu-deng-lu-yan-zheng.html">
+            
+                <a href="yong-hu-deng-lu-yan-zheng.html">
+            
+                    
+                    用户登录验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../xin-wen-qian-tai/xin-wen-qian-tai.html">
+            
+                <a href="../xin-wen-qian-tai/xin-wen-qian-tai.html">
+            
+                    
+                    新闻前台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../xin-wen-qian-tai/xin-wen-shou-ye.html">
+            
+                <a href="../xin-wen-qian-tai/xin-wen-shou-ye.html">
+            
+                    
+                    新闻首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../xin-wen-qian-tai/xin-wen-lei-biao.html">
+            
+                <a href="../xin-wen-qian-tai/xin-wen-lei-biao.html">
+            
+                    
+                    新闻列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../xin-wen-qian-tai/dian-ji-liang-lie-biao.html">
+            
+                <a href="../xin-wen-qian-tai/dian-ji-liang-lie-biao.html">
+            
+                    
+                    点击量列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../xin-wen-qian-tai/xin-wen-xiang-qing.html">
+            
+                <a href="../xin-wen-qian-tai/xin-wen-xiang-qing.html">
+            
+                    
+                    新闻详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../xin-wen-qian-tai/shou-chang-xin-wen.html">
+            
+                <a href="../xin-wen-qian-tai/shou-chang-xin-wen.html">
+            
+                    
+                    收藏新闻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../xin-wen-qian-tai/ping-lun.html">
+            
+                <a href="../xin-wen-qian-tai/ping-lun.html">
+            
+                    
+                    评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../xin-wen-qian-tai/hui-fu-ping-lun.html">
+            
+                <a href="../xin-wen-qian-tai/hui-fu-ping-lun.html">
+            
+                    
+                    回复评论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../xin-wen-qian-tai/ping-lun-dian-zan.html">
+            
+                <a href="../xin-wen-qian-tai/ping-lun-dian-zan.html">
+            
+                    
+                    评论点赞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../xin-wen-qian-tai/guan-zhu-zuo-zhe.html">
+            
+                <a href="../xin-wen-qian-tai/guan-zhu-zuo-zhe.html">
+            
+                    
+                    关注作者
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../xin-wen-hou-tai/xin-wen-hou-tai.html">
+            
+                <a href="../xin-wen-hou-tai/xin-wen-hou-tai.html">
+            
+                    
+                    新闻后台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../xin-wen-hou-tai/chuang-jian-guan-li-yuan.html">
+            
+                <a href="../xin-wen-hou-tai/chuang-jian-guan-li-yuan.html">
+            
+                    
+                    创建管理员
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../xin-wen-hou-tai/deng-lu.html">
+            
+                <a href="../xin-wen-hou-tai/deng-lu.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../xin-wen-hou-tai/hou-tai-shou-ye.html">
+            
+                <a href="../xin-wen-hou-tai/hou-tai-shou-ye.html">
+            
+                    
+                    后台首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../xin-wen-hou-tai/tui-chu.html">
+            
+                <a href="../xin-wen-hou-tai/tui-chu.html">
+            
+                    
+                    退出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../xin-wen-hou-tai/deng-lu-yan-zheng.html">
+            
+                <a href="../xin-wen-hou-tai/deng-lu-yan-zheng.html">
+            
+                    
+                    用户登录验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../xin-wen-hou-tai/yong-hu-tong-ji.html">
+            
+                <a href="../xin-wen-hou-tai/yong-hu-tong-ji.html">
+            
+                    
+                    用户统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../xin-wen-hou-tai/yong-hu-lei-biao.html">
+            
+                <a href="../xin-wen-hou-tai/yong-hu-lei-biao.html">
+            
+                    
+                    用户列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../xin-wen-hou-tai/xin-wen-shen-he-lie-biao.html">
+            
+                <a href="../xin-wen-hou-tai/xin-wen-shen-he-lie-biao.html">
+            
+                    
+                    新闻审核列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../xin-wen-hou-tai/xin-wen-shen-he.html">
+            
+                <a href="../xin-wen-hou-tai/xin-wen-shen-he.html">
+            
+                    
+                    新闻审核
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../xin-wen-hou-tai/xin-wen-ban-shi-bian-ji-lie-biao.html">
+            
+                <a href="../xin-wen-hou-tai/xin-wen-ban-shi-bian-ji-lie-biao.html">
+            
+                    
+                    新闻版式编辑列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../xin-wen-hou-tai/xin-wen-ban-shi-bian-ji.html">
+            
+                <a href="../xin-wen-hou-tai/xin-wen-ban-shi-bian-ji.html">
+            
+                    
+                    新闻版式编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../xin-wen-hou-tai/xin-wen-fen-lei-guan-li.html">
+            
+                <a href="../xin-wen-hou-tai/xin-wen-fen-lei-guan-li.html">
+            
+                    
+                    新闻分类管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../xiang-mu-bu-shu/xiang-mu-bu-shu.html">
+            
+                <a href="../xiang-mu-bu-shu/xiang-mu-bu-shu.html">
+            
+                    
+                    项目部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../xiang-mu-bu-shu/gunicorn.html">
+            
+                <a href="../xiang-mu-bu-shu/gunicorn.html">
+            
+                    
+                    gunicorn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../xiang-mu-bu-shu/nginx.html">
+            
+                <a href="../xiang-mu-bu-shu/nginx.html">
+            
+                    
+                    nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >基类模板抽取</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x57FA;&#x7C7B;&#x6A21;&#x677F;&#x62BD;&#x53D6;">&#x57FA;&#x7C7B;&#x6A21;&#x677F;&#x62BD;&#x53D6;</h1>
+<ul>
+<li>&#x67E5;&#x770B;&#x53D1;&#x73B0;&#x9996;&#x9875;&#x7684;&#x90E8;&#x5206;html&#x4E0E;&#x7528;&#x6237;&#x4E2D;&#x5FC3;&#x9996;&#x9875;&#x7684;&#x90E8;&#x5206;html&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5C06;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x63D0;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x7236;&#x6A21;&#x677F;&#x4E2D;</li>
+<li>&#x5728;templates&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;base.html&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</li>
+<li>&#x9884;&#x7559;&#x533A;&#x57DF;head&#xFF0C;&#x7528;&#x4E8E;&#x586B;&#x5145;js&#x4EE3;&#x7801;</li>
+<li>&#x9884;&#x7559;&#x533A;&#x57DF;body&#xFF0C;&#x7528;&#x4E8E;&#x586B;&#x5145;&#x4E0D;&#x540C;&#x7684;&#x6B63;&#x6587;html</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;{{ title }} &#x65B0;&#x7ECF;&#x8D44;&#x8BAF;&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/news/css/reset.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/static/news/css/main.css&quot;&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/news/js/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/news/js/jquery.form.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/static/news/js/main.js&quot;&gt;&lt;/script&gt;
+    {% block head %}{% endblock %}
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;header_con&quot;&gt;
+    &lt;div class=&quot;header&quot;&gt;
+        &lt;a href=&quot;/&quot; class=&quot;logo fl&quot;&gt;&lt;img src=&quot;/static/news/images/logo.png&quot; alt=&quot;logo&quot;&gt;&lt;/a&gt;
+        {% block menu %}
+            &lt;ul class=&quot;menu fl&quot;&gt;
+                &lt;li class=&quot;active&quot; data-cid=&quot;0&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&#x6700;&#x65B0;&lt;/a&gt;&lt;/li&gt;
+                {% for category in category_list %}
+                    &lt;li data-cid=&quot;{{ category.id }}&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;{{ category.name }}&lt;/a&gt;&lt;/li&gt;
+                {% endfor %}
+            &lt;/ul&gt;
+        {% endblock %}
+
+        {% if g.user %}
+            &lt;div class=&quot;user_login fr&quot; style=&quot;display: block;&quot;&gt;
+                &lt;img src=&quot;{{ g.user.avatar_url }}&quot; class=&quot;lgin_pic&quot;&gt;
+                &lt;a href=&quot;/user/&quot; class=&quot;nick_name&quot;&gt;{{ g.user.nick_name }}&lt;/a&gt;
+                &lt;a href=&quot;javascript:;&quot; class=&quot;logout_btn&quot;&gt;&#x9000;&#x51FA;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;user_btns fr&quot; style=&quot;display: none;&quot;&gt;
+                &lt;a href=&quot;javascript:;&quot; class=&quot;login_btn&quot;&gt;&#x767B;&#x5F55;&lt;/a&gt;
+                /
+                &lt;a href=&quot;javascript:;&quot; class=&quot;register_btn&quot;&gt;&#x6CE8;&#x518C;&lt;/a&gt;
+            &lt;/div&gt;
+        {% else %}
+            &lt;div class=&quot;user_login fr&quot;&gt;
+                &lt;img src=&quot;&quot; class=&quot;lgin_pic&quot;&gt;
+                &lt;a href=&quot;/user/&quot; class=&quot;nick_name&quot;&gt;&lt;/a&gt;
+                &lt;a href=&quot;javascript:;&quot; class=&quot;logout_btn&quot;&gt;&#x9000;&#x51FA;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;user_btns fr&quot;&gt;
+                &lt;a href=&quot;javascript:;&quot; class=&quot;login_btn&quot;&gt;&#x767B;&#x5F55;&lt;/a&gt;
+                /
+                &lt;a href=&quot;javascript:;&quot; class=&quot;register_btn&quot;&gt;&#x6CE8;&#x518C;&lt;/a&gt;
+            &lt;/div&gt;
+        {% endif %}
+    &lt;/div&gt;
+&lt;/div&gt;
+
+{% block body %}{% endblock %}
+
+&lt;div class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;footer_links&quot;&gt;
+        &lt;a href=&quot;&quot;&gt;&#x5173;&#x4E8E;&#x6211;&#x4EEC;&lt;/a&gt;
+        &lt;span&gt;|&lt;/span&gt;
+        &lt;a href=&quot;&quot;&gt;&#x8054;&#x7CFB;&#x6211;&#x4EEC;&lt;/a&gt;
+        &lt;span&gt;|&lt;/span&gt;
+        &lt;a href=&quot;&quot;&gt;&#x62DB;&#x8058;&#x4EBA;&#x624D;&lt;/a&gt;
+        &lt;span&gt;|&lt;/span&gt;
+        &lt;a href=&quot;&quot;&gt;&#x53CB;&#x60C5;&#x94FE;&#x63A5;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;copyright&quot;&gt;
+        CopyRight &#xA9; 2018 &#x65B0;&#x7ECF;&#x8D44;&#x8BAF;&#x4FE1;&#x606F;&#x6280;&#x672F;&#x6709;&#x9650;&#x516C;&#x53F8; All Rights Reserved&lt;br/&gt;
+        &#x7535;&#x8BDD;&#xFF1A;010-****888 &#x4EAC;ICP&#x5907;*******8&#x53F7;
+    &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- &#x767B;&#x5F55;&#x8868;&#x5355; --&gt;
+&lt;input type=&quot;hidden&quot; id=&quot;csrf_token&quot; value=&quot;{{ csrf_token() }}&quot;&gt;
+&lt;form class=&quot;login_form_con&quot;&gt;
+    &lt;div class=&quot;login_form&quot;&gt;
+        &lt;div class=&quot;login_title&quot;&gt;
+            &lt;h3&gt;&#x767B; &#x5F55;&lt;/h3&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;shutoff&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group&quot;&gt;
+            &lt;input id=&quot;mobile&quot; type=&quot;text&quot; name=&quot;mobile&quot; autocomplete=&quot;off&quot;&gt;
+            &lt;div class=&quot;input_tip&quot;&gt;&#x624B;&#x673A;&#x53F7;&lt;/div&gt;
+            &lt;div id=&quot;login-mobile-err&quot; class=&quot;error_tip&quot;&gt;&#x624B;&#x673A;&#x53F7;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group&quot;&gt;
+            &lt;input id=&quot;password&quot; type=&quot;password&quot; name=&quot;password&quot;&gt;
+            &lt;div class=&quot;input_tip&quot;&gt;&#x5BC6;&#x7801;(&#x4E0D;&#x5C11;&#x4E8E;6&#x4F4D;)&lt;/div&gt;
+            &lt;div id=&quot;login-password-err&quot; class=&quot;error_tip&quot;&gt;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;&#x767B; &#x5F55;&quot; class=&quot;input_sub&quot;&gt;
+        &lt;div class=&quot;down_link&quot;&gt;&#x8FD8;&#x6CA1;&#x6709;&#x8D26;&#x53F7;&#xFF1F;&lt;a href=&quot;javascript:;&quot; class=&quot;to_register&quot;&gt;&#x7ACB;&#x5373;&#x6CE8;&#x518C;&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- &#x6CE8;&#x518C;&#x8868;&#x5355; --&gt;
+&lt;form class=&quot;register_form_con&quot;&gt;
+    &lt;div class=&quot;register_form&quot;&gt;
+        &lt;div class=&quot;register_title&quot;&gt;
+            &lt;h3&gt;&#x6CE8; &#x518C;&lt;/h3&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;shutoff&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group&quot;&gt;
+            &lt;input type=&quot;text&quot; name=&quot;mobile&quot; autocomplete=&quot;off&quot; id=&quot;register_mobile&quot; class=&quot;phone_input&quot;&gt;
+            &lt;div class=&quot;input_tip&quot;&gt;&#x624B;&#x673A;&#x53F7;&lt;/div&gt;
+            &lt;div id=&quot;register-mobile-err&quot; class=&quot;error_tip2&quot;&gt;&#x624B;&#x673A;&#x53F7;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group&quot;&gt;
+            &lt;input type=&quot;text&quot; name=&quot;code_pwd&quot; id=&quot;imagecode&quot; class=&quot;code_pwd&quot;&gt;
+            &lt;div class=&quot;input_tip&quot;&gt;&#x56FE;&#x5F62;&#x9A8C;&#x8BC1;&#x7801;&lt;/div&gt;
+            &lt;img src=&quot;/user/image_code?1&quot; class=&quot;get_pic_code&quot; onclick=&quot;generateImageCode()&quot;&gt;
+            &lt;div id=&quot;register-image-code-err&quot; class=&quot;error_tip2&quot;&gt;&#x56FE;&#x5F62;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group&quot;&gt;
+            &lt;input type=&quot;text&quot; name=&quot;smscode&quot; id=&quot;smscode&quot; class=&quot;code_pwd&quot;&gt;
+            &lt;div class=&quot;input_tip&quot;&gt;&#x624B;&#x673A;&#x9A8C;&#x8BC1;&#x7801;&lt;/div&gt;
+            &lt;a href=&quot;javascript:;&quot; class=&quot;get_code&quot; onclick=&quot;sendSMSCode()&quot;&gt;&#x70B9;&#x51FB;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;&lt;/a&gt;
+            &lt;div id=&quot;register-sms-code-err&quot; class=&quot;error_tip2&quot;&gt;&#x9A8C;&#x8BC1;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group&quot;&gt;
+            &lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;register_password&quot; class=&quot;pass_input&quot;&gt;
+            &lt;div class=&quot;input_tip&quot;&gt;&#x5BC6;&#x7801;(&#x4E0D;&#x5C11;&#x4E8E;6&#x4F4D;)&lt;/div&gt;
+            &lt;div id=&quot;register-password-err&quot; class=&quot;error_tip2&quot;&gt;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form_group2 clearfix&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;agree_input&quot; checked&gt;
+            &lt;p&gt;&#x540C;&#x610F;&#x4F7F;&#x7528;&#x6761;&#x6B3E;&#xFF0C;&#x5E76;&#x5DF2;&#x9605;&#x8BFB;&quot;&#x8DDF;&#x5E16;&#x8BC4;&#x8BBA;&#x81EA;&#x5F8B;&#x7BA1;&#x7406;&#x627F;&#x8BFA;&#x4E66;&quot;&lt;/p&gt;
+            &lt;div class=&quot;error_tip&quot;&gt;&#x8BF7;&#x52FE;&#x9009;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;&#x6CE8; &#x518C;&quot; class=&quot;input_sub&quot;&gt;
+        &lt;div class=&quot;down_link&quot;&gt;&#x5DF2;&#x6709;&#x8D26;&#x53F7;&#xFF1F;&lt;a href=&quot;javascript:;&quot; class=&quot;to_login&quot;&gt;&#x7ACB;&#x5373;&#x767B;&#x5F55;&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><ul>
+<li>&#x4FEE;&#x6539;user/user.html&#x6A21;&#x677F;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</li>
+</ul>
+<pre><code>{% extends &apos;base.html&apos; %}
+
+{% block menu %}{% endblock %}
+
+{% block body %}
+    &lt;div class=&quot;conter_con&quot;&gt;
+        &lt;div class=&quot;user_menu_con fl&quot;&gt;
+            &lt;div class=&quot;user_center_pic&quot;&gt;
+                &lt;img src=&quot;/static/news/images/user_pic.png&quot; alt=&quot;&#x7528;&#x6237;&#x56FE;&#x7247;&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;user_center_name&quot;&gt;{{ user.nick_name }}&lt;/div&gt;
+
+            &lt;ul class=&quot;option_list&quot;&gt;
+                &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/user/base&quot; target=&quot;main_frame&quot;&gt;&#x57FA;&#x672C;&#x8D44;&#x6599;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/user/pic&quot; target=&quot;main_frame&quot;&gt;&#x5934;&#x50CF;&#x8BBE;&#x7F6E;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/user/follow&quot; target=&quot;main_frame&quot;&gt;&#x6211;&#x7684;&#x5173;&#x6CE8;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/user/passwd&quot; target=&quot;main_frame&quot;&gt;&#x5BC6;&#x7801;&#x4FEE;&#x6539;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/user/collect&quot; target=&quot;main_frame&quot;&gt;&#x6211;&#x7684;&#x6536;&#x85CF;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/user/news_release/0&quot; target=&quot;main_frame&quot;&gt;&#x65B0;&#x95FB;&#x53D1;&#x5E03;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/user/news_list&quot; target=&quot;main_frame&quot;&gt;&#x65B0;&#x95FB;&#x5217;&#x8868;&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;user_con fr&quot;&gt;
+            &lt;iframe src=&quot;/user/base&quot; frameborder=&quot;0&quot; name=&quot;main_frame&quot; class=&quot;main_frame&quot; id=&quot;main_frame&quot;&gt;&lt;/iframe&gt;
+        &lt;/div&gt;        
+    &lt;/div&gt;
+{% endblock %}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="yong-hu-zhong-xin.html" class="navigation navigation-prev " aria-label="Previous page: 用户中心">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="yong-hu-mo-ban-chou-qu.html" class="navigation navigation-next " aria-label="Next page: 用户模板代码抽取">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"基类模板抽取","level":"1.3.5","depth":2,"next":{"title":"用户模板代码抽取","level":"1.3.6","depth":2,"path":"yong-hu/yong-hu-mo-ban-chou-qu.md","ref":"yong-hu/yong-hu-mo-ban-chou-qu.md","articles":[]},"previous":{"title":"用户中心","level":"1.3.4","depth":2,"path":"yong-hu/yong-hu-zhong-xin.md","ref":"yong-hu/yong-hu-zhong-xin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"yong-hu/ji-lei-mo-ban-chou-qu.md","mtime":"2018-05-21T01:20:20.944Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-21T10:02:22.388Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
